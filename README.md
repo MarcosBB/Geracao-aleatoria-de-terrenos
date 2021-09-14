@@ -21,7 +21,7 @@ O projeto segue uma [descrição disponibilizada pelo professor](https://docs.go
 - [x] Modularização do programa (quais os arquivos .c e .h);
 - [x] Definição dos tipos de dados necessários (typedef e structs);
 - [x] Geração da linha de contorno em um arranjo.
-- [ ] Leitura dos parâmetros de configuração (fator de deslocamento) em linha de comando;
+- [x] Leitura dos parâmetros de configuração (fator de deslocamento) em linha de comando;
 - [ ] Criação de uma imagem a partir do arranjo com a linha de contorno.
 - [ ] Implementação de elementos adicionais, definidos pelo próprio grupo.
   
