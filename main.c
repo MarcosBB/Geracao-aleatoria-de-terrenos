@@ -9,8 +9,10 @@
 #include "montanha.h"
 
 void usage(){
-    printf("    -d <num> - Define o deslocamento aleatório máximo a ser usado na geração.");
-    printf("    -o <arq> - Define o nome do arquivo de imagem a ser gerado.");
+    printf("\nPara digitar parametros de configuracao digite 'main.exe' e em seguida:\n\n");
+    printf("    -d <num> - Define o deslocamento aleatorio maximo a ser usado na geracao.\n");
+    printf("    -o <arq> - Define o nome do arquivo de imagem a ser gerado.\n\n");
+    printf("Exemplo: main.exe -d 5 -o imagem\n\n");
 }
 
 int main(int argc, char* argv[]){
@@ -33,7 +35,7 @@ int main(int argc, char* argv[]){
 
     if (sensibilidade < 0){
         usage();
-        return 0;
+        exit(-1);
     }
 
     printf("\n\nSensibilidade = %d\nArgc = %d\nFileName = %s\n\n" , sensibilidade , argc, fileName);
