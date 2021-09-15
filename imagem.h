@@ -1,0 +1,1 @@
+void criaimagem( int *content);

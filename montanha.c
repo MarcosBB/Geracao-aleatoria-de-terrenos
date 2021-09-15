@@ -4,6 +4,13 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+#include <math.h>
+
+#include "settings.h"
+
+int range(){
+    return pow(2, expoenteDeRange) + 1;
+}
 
 int mudaTamanho(int sensibilidade){ // Decide se a mudança vai ser incremento ou decremento e retorna um número aleatório.
     int mudanca = rand() % 2;
@@ -15,7 +22,7 @@ int mudaTamanho(int sensibilidade){ // Decide se a mudança vai ser incremento o
         return (rand() % sensibilidade) * (-1);
 }
 
-void preencheMontanha(int *vetor, int range, int sensibilidade){ // Preenche os espaços em branco do array da montanha
+void preencheMontanha(int *vetor, int sensibilidade){ // Preenche os espaços em branco do array da montanha
     int indice1;
     int indice2;
     int indiceMedio;
@@ -26,7 +33,7 @@ void preencheMontanha(int *vetor, int range, int sensibilidade){ // Preenche os 
     while(true){
         achou_o_primeiro = false;
         terminou = true;
-        for (size_t i = 0; i < range; i++){
+        for (size_t i = 0; i < range(); i++){
             if (vetor[i]<0 && !achou_o_primeiro){
                 indice1 = i-1;
                 achou_o_primeiro = true;
@@ -48,20 +55,20 @@ void preencheMontanha(int *vetor, int range, int sensibilidade){ // Preenche os 
     }
 }
 
-void criaMontanha(int *vetor, int range, int sensibilidade){ //
+void criaMontanha(int *vetor, int sensibilidade){ //
     srand(time(NULL));
 
     // Inicializa array da montanha
-    for (size_t i = 0; i < range; i++){
+    for (size_t i = 0; i < range(); i++){
         vetor[i] = -1;
     }
 
     // Cria tamanho das extremidades da montanha
-    int extremidade = rand() % 21;
+    int extremidade = rand() % tamanhoMaximo + 1;
     vetor[0] = extremidade;
-    vetor[range-1] = extremidade;
+    vetor[range()-1] = extremidade;
 
     // Preenche a montanha com tamanhos
-    preencheMontanha(vetor, range, sensibilidade);
+    preencheMontanha(vetor, sensibilidade);
 
 }
