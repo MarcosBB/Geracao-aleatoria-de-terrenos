@@ -54,3 +54,5 @@ dkms.conf
 #other files
 *.bat
 .vscode
+*.ppm
+*.rar
