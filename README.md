@@ -34,7 +34,7 @@ Tudo o que foi requisitado foi feito, menos o que foi informado abaixo. Nenhuma 
 Não foi possivel entregar a leitura do parametro do nome do arquivo graças a um bug em cima da hora.
 
 ## O que seria feito diferentemente?
-A mudança que seria feita para melhorar o programa seria a de possibilitar a mudança de outras variaveis de configuração pelo terminal, como a `sensibilidade` e o `tamanho Maximo`.
+A mudança que seria feita para melhorar o programa seria a de possibilitar a mudança de outras variaveis de configuração pelo terminal, como a `sensibilidade` e o `tamanhoMaximo`.
 
 ## Compilando e rodando o projeto
 ### Compilando
